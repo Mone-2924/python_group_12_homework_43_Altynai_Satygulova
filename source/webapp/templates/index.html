@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="firstnumber">Firstnumber</label>
+        <input  id="firstnumber" name="number">
+        <label for="secondnumber">Second number</label>
+        <input  id="secondnumber" name="number_two">
+        <Br>
+        <input type="radio" name="sum" id="add" value="add"><label for="add">add</label><Br>
+        <input type="radio" name="sum" id="subtract" value="subtract"><label for="subtract">subtract</label><Br>
+        <input type="radio" name="sum" id="multiply" value="multiply"><label for="multiply">multiply</label><Br>
+        <input type="radio" name="sum" id="divide" value="divide"><label for="divide">divide</label>
+        <Br>
+        <input type="submit" value="отправить">
+    </form>
+
+    <p>{{number}} {{icon}} {{number_two}} = {{ result }}</p>
+
+</body>
+</html>
